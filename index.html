@@ -292,6 +292,118 @@ font-size:13px;
 color:var(--text)
 }
 
+.showcase{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+margin-top:28px
+}
+
+.showcase-card{
+border:1px solid var(--border);
+background:#fff;
+padding:20px;
+box-shadow:0 5px 18px rgba(23,63,103,.05)
+}
+
+.showcase-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+margin-bottom:15px
+}
+
+.showcase-head h3{
+margin:0;
+color:var(--navy);
+font-size:17px
+}
+
+.demo{
+border:1px solid var(--border);
+background:#f8fafc;
+padding:14px
+}
+
+.demo-title{
+font-size:10px;
+font-weight:700;
+color:var(--muted);
+text-transform:uppercase;
+letter-spacing:.8px;
+margin-bottom:10px
+}
+
+.demo-kpis{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:7px;
+margin-bottom:10px
+}
+
+.demo-kpi{
+background:#fff;
+border:1px solid var(--border);
+padding:9px 5px;
+text-align:center
+}
+
+.demo-kpi b{
+display:block;
+font-size:15px;
+color:var(--navy)
+}
+
+.demo-kpi span{
+font-size:8px;
+color:var(--muted)
+}
+
+.demo-row{
+display:grid;
+grid-template-columns:1.3fr 1fr .8fr;
+gap:6px;
+margin-bottom:6px
+}
+
+.demo-bar{
+height:8px;
+background:#dce8f1;
+border-radius:2px;
+overflow:hidden
+}
+
+.demo-bar i{
+display:block;
+height:100%;
+background:var(--blue)
+}
+
+.demo-label{
+font-size:9px;
+color:var(--muted)
+}
+
+.demo-status{
+font-size:9px;
+padding:3px 6px;
+background:#eef4f8;
+color:var(--blue);
+text-align:center
+}
+
+.showcase-caption{
+font-size:13px;
+color:var(--muted);
+margin:13px 0 0
+}
+
+@media(max-width:800px){
+.showcase{grid-template-columns:1fr}
+.demo-kpis{grid-template-columns:repeat(2,1fr)}
+}
+
 .contact{
 background:var(--navy);
 color:#fff
@@ -353,6 +465,7 @@ DORINTHIE ISSA ALIDJI
 <a href="#profil">Profil</a>
 <a href="#experience">Expérience</a>
 <a href="#realisations">Réalisations</a>
+<a href="#showcase">Aperçus</a>
 <a href="#outils">Outils</a>
 <a href="#competences">Compétences</a>
 <a href="#contact">Contact</a>
@@ -635,6 +748,106 @@ Une sélection de solutions conçues à partir de problématiques réelles de fi
 <span class="tag">BVA</span>
 <span class="tag">Écarts</span>
 <span class="tag">Dashboard</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="showcase" class="alt">
+
+<div class="container">
+
+<h2 class="section-title">
+Aperçu visuel des solutions
+</h2>
+
+<p class="section-intro">
+Les aperçus ci-dessous montrent le type d’interface et de pilotage que je conçois dans Excel. Les données affichées sont volontairement génériques afin de protéger les informations professionnelles.
+</p>
+
+<div class="showcase">
+
+<div class="showcase-card">
+<div class="showcase-head">
+<h3>Dashboard KPI financier</h3>
+<span class="tag">Excel • KPI</span>
+</div>
+<div class="demo">
+<div class="demo-title">Synthèse financière — exemple</div>
+<div class="demo-kpis">
+<div class="demo-kpi"><b>49</b><span>CDV suivis</span></div>
+<div class="demo-kpi"><b>06</b><span>Communes</span></div>
+<div class="demo-kpi"><b>02</b><span>Banques</span></div>
+<div class="demo-kpi"><b>KPI</b><span>Contrôle</span></div>
+</div>
+<div class="demo-row"><div class="demo-label">Fonds reçus</div><div class="demo-bar"><i style="width:82%"></i></div><div class="demo-status">Suivi</div></div>
+<div class="demo-row"><div class="demo-label">Rapprochements</div><div class="demo-bar"><i style="width:72%"></i></div><div class="demo-status">Contrôle</div></div>
+<div class="demo-row"><div class="demo-label">Frais bancaires</div><div class="demo-bar"><i style="width:38%"></i></div><div class="demo-status">Analyse</div></div>
+</div>
+<p class="showcase-caption">Vue synthétique pour suivre les flux, les rapprochements, les écarts et les points de contrôle.</p>
+</div>
+
+<div class="showcase-card">
+<div class="showcase-head">
+<h3>Cycle fournisseurs & paiements</h3>
+<span class="tag">Workflow</span>
+</div>
+<div class="demo">
+<div class="demo-title">Suivi des factures — exemple</div>
+<div class="demo-kpis">
+<div class="demo-kpi"><b>01</b><span>Contrôle</span></div>
+<div class="demo-kpi"><b>03</b><span>Validation</span></div>
+<div class="demo-kpi"><b>02</b><span>À payer</span></div>
+<div class="demo-kpi"><b>01</b><span>Échue</span></div>
+</div>
+<div class="demo-row"><div class="demo-label">Facture A</div><div class="demo-bar"><i style="width:100%"></i></div><div class="demo-status">Payée</div></div>
+<div class="demo-row"><div class="demo-label">Facture B</div><div class="demo-bar"><i style="width:55%"></i></div><div class="demo-status">Partielle</div></div>
+<div class="demo-row"><div class="demo-label">Facture C</div><div class="demo-bar"><i style="width:25%"></i></div><div class="demo-status">À payer</div></div>
+</div>
+<p class="showcase-caption">Vue orientée échéances, montants payés, restes à payer et statut du workflow.</p>
+</div>
+
+<div class="showcase-card">
+<div class="showcase-head">
+<h3>Payment File Control</h3>
+<span class="tag">Contrôle</span>
+</div>
+<div class="demo">
+<div class="demo-title">Contrôle d’un dossier — exemple</div>
+<div class="demo-kpis">
+<div class="demo-kpi"><b>08</b><span>Contrôles</span></div>
+<div class="demo-kpi"><b>06</b><span>Conformes</span></div>
+<div class="demo-kpi"><b>02</b><span>À corriger</span></div>
+<div class="demo-kpi"><b>NOK</b><span>Blocage</span></div>
+</div>
+<div class="demo-row"><div class="demo-label">Pièces justificatives</div><div class="demo-bar"><i style="width:88%"></i></div><div class="demo-status">OK</div></div>
+<div class="demo-row"><div class="demo-label">Validation</div><div class="demo-bar"><i style="width:65%"></i></div><div class="demo-status">À vérifier</div></div>
+<div class="demo-row"><div class="demo-label">Éligibilité</div><div class="demo-bar"><i style="width:45%"></i></div><div class="demo-status">NOK</div></div>
+</div>
+<p class="showcase-caption">Une logique de contrôle par criticité permettant de bloquer un dossier avant paiement lorsqu’un contrôle majeur est NOK.</p>
+</div>
+
+<div class="showcase-card">
+<div class="showcase-head">
+<h3>Suivi budgétaire & reporting</h3>
+<span class="tag">Pilotage</span>
+</div>
+<div class="demo">
+<div class="demo-title">Budget vs réalisation — exemple</div>
+<div class="demo-kpis">
+<div class="demo-kpi"><b>100%</b><span>Budget</span></div>
+<div class="demo-kpi"><b>68%</b><span>Réalisé</span></div>
+<div class="demo-kpi"><b>32%</b><span>Solde</span></div>
+<div class="demo-kpi"><b>Écart</b><span>À analyser</span></div>
+</div>
+<div class="demo-row"><div class="demo-label">Activité A</div><div class="demo-bar"><i style="width:68%"></i></div><div class="demo-status">68%</div></div>
+<div class="demo-row"><div class="demo-label">Activité B</div><div class="demo-bar"><i style="width:84%"></i></div><div class="demo-status">84%</div></div>
+<div class="demo-row"><div class="demo-label">Activité C</div><div class="demo-bar"><i style="width:41%"></i></div><div class="demo-status">41%</div></div>
+</div>
+<p class="showcase-caption">Lecture rapide de la consommation budgétaire et identification des lignes nécessitant une analyse.</p>
 </div>
 
 </div>
